@@ -18,7 +18,8 @@ while(True):
             num = int(input("Digite um número decimal: \n"))
             base = int(input("Digite a base para conversão: \n"))
             new_num = conversor.getFromBase(num, base)
-            print(f"\nO valor de {num} decimal na base {base} é: {new_num}")
+            if new_num!= None:
+                print(f"\nO valor de {num} decimal na base {base} é: {new_num}")
         
         case "3":
             break

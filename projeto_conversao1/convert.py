@@ -64,22 +64,25 @@ class Convert:
     def getFromBase(self, decimal, base):
 
         string = ""
-        
+        bases = [16, 2, 8]
         while(decimal>=base):
             if base==16 and decimal%base>9:
-                string += self.getHex(decimal%base)
+                string += str(self.getHex(decimal%base))
             else:
                 string += str(int(decimal%base))
             
             decimal//= base 
         if base==16:
-           string += self.getHex(decimal)
+            string += str(self.getHex(decimal))
         else:
             string += str(decimal)
         #reverter string
         #:: = começa do último índice
         #-1 = a leitura será feita de 1 em um índice ao contrário
         string = string[::-1]
+        
+        if base not in bases:
+            return print("Base não reconhecida")
         return string
 
     
@@ -98,3 +101,5 @@ class Convert:
                     return "E"
                 case 15:
                     return "F"
+                case _:
+                    return num
