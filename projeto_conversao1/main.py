@@ -1,7 +1,7 @@
 import convert as Conversor
 
 conversor = Conversor.Convert()
-
+#teste
 while(True):
 
     op = input("\nDigite a operação:\n1 - Converter de outras bases para decimal\n2 - Converter de decimal para outras bases\n3 - Encerrar\n")
